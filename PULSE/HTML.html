@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SONICBOX - Lecteur Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🔊 SONICBOX</h1>
+            <button id="uploadBtn">➕ Ajouter Musique</button>
+        </header>
+        
+        <div id="library">
+            <h2>🎵 Votre Bibliothèque</h2>
+            <div id="songList">
+                <p class="empty">Aucune musique... Ajoutez-en !</p>
+            </div>
+        </div>
+        
+        <div id="player">
+            <div id="nowPlaying">Prêt à jouer...</div>
+            <div class="controls">
+                <button id="playBtn">▶</button>
+                <input type="range" id="volume" min="0" max="100" value="80">
+            </div>
+        </div>
+        
+        <audio id="audioPlayer" hidden></audio>
+        <input type="file" id="fileInput" accept="audio/*" multiple hidden>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
